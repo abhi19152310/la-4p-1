@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>React Welcome App</title>
+</head>
+<body>
+
+<!-- Root element where React will render -->
+<div id="root"></div>
+
+<!-- React CDN Links -->
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<!-- React Code -->
+<script type="text/babel">
+
+// Functional Component that receives props (data)
+function Welcome(props) {
+    return (
+        <div style={{
+            textAlign: "center",      // Centers the text
+            marginTop: "50px",        // Adds space from top
+            fontFamily: "Arial"       // Changes font style
+        }}>
+            {/* Displaying name using props */}
+            <h1>Hello, {props.name}</h1>
+
+            {/* Displaying city using props */}
+            <h2>Welcome to {props.city}</h2>
+
+            <p>
+                This application demonstrates how React uses reusable components 
+                and props to create dynamic and interactive user interfaces in a simple and efficient way.
+            </p>
+            <h1>D.Abhishek</h1>
+            <h1>24BKT0064</h1>
+        </div>
+    );
+}
+
+// Creating root using React 18 method
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// Rendering component and passing values as props
+root.render(
+    <Welcome name="Abhishek" city="Andhra Pradesh" />
+);
+
+</script>
+
+</body>
+</html>
